@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        foreach(Transform child in SnapPoints.transform)
+        foreach (Transform child in SnapPoints.transform)
         {
             snapPointsLocations.Add(child);
         }
@@ -29,21 +29,19 @@ public class GameManager : MonoBehaviour
         float closestDistance = -1;
         Transform closestSnapPoint = null;
 
-        foreach(Transform point in snapPointsLocations)
+        foreach (Transform point in snapPointsLocations)
         {
-            float currentDistance = Vector3.Distance(point.position, card.position);
-            if(closestSnapPoint == null || currentDistance <= closestDistance)
+            float currentDistance = Vector2.Distance(point.position, card.position);
+            if (closestSnapPoint == null || currentDistance <= closestDistance)
             {
                 closestSnapPoint = point;
                 closestDistance = currentDistance;
             }
         }
 
-        if(closestSnapPoint != null || closestDistance <= 0.5f)
+        if (closestSnapPoint != null && closestDistance <= 25f)
         {
             card.position = closestSnapPoint.position;
-            Debug.Log(closestSnapPoint.position);
-            Debug.Log(card.position);
         }
     }
 }

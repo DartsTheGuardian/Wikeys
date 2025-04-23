@@ -77,3 +77,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Themes]/*
 /Wikeys/Assets/\[Themes\]/OneDrive
 *.meta
+/Wikeys/Assets/\[Themes\]/OneDrive
+*.meta
+*.meta

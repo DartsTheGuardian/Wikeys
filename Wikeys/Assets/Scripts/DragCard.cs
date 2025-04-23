@@ -12,11 +12,11 @@ public class DragCard : MonoBehaviour, IDragHandler, IDropHandler
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
+        transform.SetAsLastSibling();
     }
 
     public void OnDrop(PointerEventData eventData)
     {
         OnDropCard?.Invoke(this.transform);
-        Debug.Log("snap!");
     }
 }
