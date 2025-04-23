@@ -76,3 +76,4 @@ crashlytics-build.properties
 # OneDrive Remove
 /[Aa]ssets/[Themes]/*
 /Wikeys/Assets/\[Themes\]/OneDrive
+*.meta
